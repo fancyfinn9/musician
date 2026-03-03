@@ -1,0 +1,7 @@
+{
+    "name": "Tuba",
+
+    "sounds": {
+        "1": {"range_start": "0", "range_end": "127", "filename": "A#1", "pitch": "34"}
+    }
+}

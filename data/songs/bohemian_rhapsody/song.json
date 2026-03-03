@@ -1,0 +1,46 @@
+{
+    "name": "Bohemian Rhapsody",
+    "description": "MAMAAA",
+    "author": "Queen",
+
+    "instruments": {
+        "1": "electric_piano",
+        "2": "electric_piano"
+    },
+
+    "parts": {
+        "meta": [
+            {"beat": "0", "type": "tempo", "value": "72"}
+        ],
+        "1": [
+            {"beat": "0", "note": "D3", "length": "0.5"},
+            {"beat": "0", "note": "Bb2", "length": "0.5"},
+            {"beat": "0.5", "note": "F2", "length": "0.5"},
+            {"beat": "1", "note": "Bb2", "length": "0.5"},
+            {"beat": "1.5", "note": "D3", "length": "0.5"},
+            {"beat": "2", "note": "G3", "length": "0.5"},
+            {"beat": "2.5", "note": "F2", "length": "0.5"},
+            {"beat": "3", "note": "F3", "length": "0.5"},
+            {"beat": "3.5", "note": "F2", "length": "0.5"},
+            {"beat": "4", "note": "D3", "length": "0.5"},
+            {"beat": "4", "note": "Bb2", "length": "0.5"},
+            {"beat": "4.5", "note": "F2", "length": "0.5"},
+            {"beat": "5", "note": "Bb2", "length": "0.5"},
+            {"beat": "5.5", "note": "D3", "length": "0.5"},
+            {"beat": "6", "note": "G3", "length": "0.5"},
+            {"beat": "6.5", "note": "F2", "length": "0.5"},
+            {"beat": "7", "note": "F3", "length": "0.5"},
+            {"beat": "7.5", "note": "F2", "length": "0.5"}
+        ],
+        "2": [
+            {"beat": "0", "note": "Bb1", "length": "2"},
+            {"beat": "0", "note": "Bb0", "length": "2"},
+            {"beat": "2", "note": "G4", "length": "1"},
+            {"beat": "3", "note": "F4", "length": "1"},
+            {"beat": "4", "note": "Bb1", "length": "2"},
+            {"beat": "4", "note": "Bb0", "length": "2"},
+            {"beat": "6", "note": "G4", "length": "1"},
+            {"beat": "7", "note": "F4", "length": "1"}
+        ]
+    }
+}

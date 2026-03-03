@@ -1,0 +1,7 @@
+{
+    "name": "Electric Piano",
+
+    "sounds": {
+        "1": {"range_start": "0", "range_end": "127", "filename": "C4", "pitch": "60"}
+    }
+}

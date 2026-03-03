@@ -1,0 +1,45 @@
+{
+    "name": "Erika",
+    "description": "Famous German folk song",
+    "author": "Traditional",
+
+    "instruments": {
+        "1": "electric_piano",
+        "2": "tuba"
+    },
+
+    "parts": {
+        "meta": [
+            {"beat": "0", "type": "tempo", "value": "120"}
+        ],
+        "1": [
+            {"beat": "0", "note": "60", "length": "1.5"},
+            {"beat": "1.5", "note": "C#3", "length": "0.5"},
+            {"beat": "2", "note": "D#3", "length": "1"},
+            {"beat": "3", "note": "D#3", "length": "1"},
+            {"beat": "4", "note": "D#3", "length": "1"},
+            {"beat": "5", "note": "G#3", "length": "1"},
+            {"beat": "6", "note": "G#3", "length": "1"},
+            {"beat": "7", "note": "C4", "length": "1"},
+            {"beat": "8", "note": "C4", "length": "1.5"},
+            {"beat": "9.5", "note": "A#3", "length": "0.5"},
+            {"beat": "10", "note": "G#3", "length": "1"}
+        ],
+        "2": [
+            {"beat": "0", "note": "G#1", "length": "1"},
+            {"beat": "1", "note": "D#2", "length": "1"},
+            {"beat": "2", "note": "G#1", "length": "1"},
+            {"beat": "3", "note": "D#2", "length": "1"},
+            {"beat": "4", "note": "G#1", "length": "1"},
+            {"beat": "5", "note": "D#2", "length": "1"},
+            {"beat": "6", "note": "G#1", "length": "1"},
+            {"beat": "7", "note": "D#2", "length": "1"},
+            {"beat": "8", "note": "G#1", "length": "1"},
+            {"beat": "9", "note": "D#2", "length": "1"},
+            {"beat": "10", "note": "G#1", "length": "1"},
+            {"beat": "11", "note": "D#2", "length": "1"},
+            {"beat": "12", "note": "G#1", "length": "1"},
+            {"beat": "13", "note": "D#2", "length": "1"}
+        ]
+    }
+}
