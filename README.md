@@ -4,6 +4,7 @@ A music mod for Luanti
 ## Features
 - Play any instrument and song with your friends (multiplayer functionality coming soon)
 - Songs are played dynamically, no audio tracks required
+- Songs support unlimited concurrent parts, chords, tempo changes, etc; Your only limitation is the server's globalstep speed (dynamics and articulations coming soon)
 - Parts can be added/removed during playback
 - Instruments play different notes dynamically, only minimum 1 sample required
 - JSON-based definition of instruments and songs
