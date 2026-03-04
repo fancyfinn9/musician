@@ -1,0 +1,12 @@
+{
+    "name": "Trumpet",
+
+    "sounds": {
+        "1": {"range_start": "0", "range_end": "66", "filename": "E3", "pitch": "64"},
+        "2": {"range_start": "67", "range_end": "71", "filename": "G3", "pitch": "67"},
+        "3": {"range_start": "72", "range_end": "75", "filename": "C4", "pitch": "72"},
+        "4": {"range_start": "76", "range_end": "83", "filename": "G4", "pitch": "79"},
+        "5": {"range_start": "84", "range_end": "90", "filename": "E5", "pitch": "88"},
+        "6": {"range_start": "91", "range_end": "127", "filename": "C6", "pitch": "96"}
+    }
+}

@@ -1,3 +1,5 @@
+-- C3 = MIDI 60
+
 local instruments = {}
 
 local function load_instrument(name)
@@ -18,6 +20,7 @@ end
 
 load_instrument("electric_piano")
 load_instrument("tuba")
+load_instrument("trumpet")
 
 local function load_song(name)
     local path = core.get_modpath("musician") .. "/data/songs/"..name.."/song.json"
@@ -97,8 +100,6 @@ local function get_sound(note, instrument)
     local st_change = note - instr.sounds[chosen_sound].pitch
     -- st_change is now how many semitones we need to pitch up, eg 5 or -3
     local pitch = 2^(st_change / 12)
-    core.log(dump(instr.sounds))
-    core.log(chosen_sound)
     return instrument.."_"..instr.sounds[chosen_sound].filename, pitch
 end
 
@@ -106,7 +107,6 @@ local next_song_id = 1
 local current_songs = {} -- {song = song, beat = 0, tempo = 120, players = {type="node", part="1", pos=xyz}}
 
 core.register_globalstep(function(dtime)
-    local queue_to_remove = {}
     for i, song in pairs(current_songs) do
         -- Check if all parts are empty
         local full_parts = 0
@@ -120,9 +120,9 @@ core.register_globalstep(function(dtime)
         end
 
         if full_parts < 1 then
-            table.insert(queue_to_remove, i)
+            current_songs[i] = nil
         elseif #song.players < 1 then
-            table.insert(queue_to_remove, i)
+            current_songs[i] = nil
         else
             song.beat = (song.beat or 0) + (dtime * ((song.tempo or 60) / 60))
             for _, note in ipairs(song.song.parts.meta) do -- Process meta part
@@ -144,7 +144,8 @@ core.register_globalstep(function(dtime)
                         elseif player.type == "player" then
                             pos = player.obj:get_pos()
                         end
-                        core.sound_play(filename, {gain = 1.0, pitch = pitch, pos=pos})
+                        local sound = core.sound_play(filename, {gain = 1.0, pitch = pitch, pos = pos})
+                        core.after((tonumber(note.length) or 1) * (60 / song.tempo), core.sound_stop, sound)
                     else
                         break
                     end
@@ -163,9 +164,6 @@ core.register_globalstep(function(dtime)
                 end
             end
         end
-    end
-    for _, i in ipairs(queue_to_remove) do
-        current_songs[i] = nil
     end
 end)
 
